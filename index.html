@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Business card website for a veterinary clinic: services, staff and online appointment booking.">
+  <title>PawCare Veterinary Clinic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="PawCare Veterinary Clinic">
+      <span class="brand-mark" aria-hidden="true">🐾</span>
+      <span class="brand-name">PawCare</span>
+    </a>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+    <label for="menu-toggle" class="burger" aria-hidden="true"></label>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#staff">Staff</a>
+      <a href="#appointment">Appointment</a>
+    </nav>
+
+    <a class="btn btn-call" href="tel:+77000000000">Call Doctor 24/7</a>
+  </header>
+
+  <main id="top">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Professional Care for Your Pets</h1>
+      <p>Examinations, surgery and vaccination by licensed veterinarians. Open around the clock.</p>
+      <a class="btn btn-primary btn-large" href="#appointment">Make an Appointment</a>
+    </section>
+
+    <section class="services" id="services" aria-labelledby="services-title">
+      <h2 id="services-title">Our services</h2>
+
+      <article class="card">
+        <img class="icon" src="images/therapy.svg" alt="" width="64" height="64">
+        <h3>Therapy</h3>
+        <p>Diagnosis, lab tests and treatment of internal diseases for cats, dogs and small animals.</p>
+      </article>
+
+      <article class="card">
+        <img class="icon" src="images/surgery.svg" alt="" width="64" height="64">
+        <h3>Surgery</h3>
+        <p>Planned and emergency operations in a sterile operating room with anesthesia monitoring.</p>
+      </article>
+
+      <article class="card">
+        <img class="icon" src="images/vaccination.svg" alt="" width="64" height="64">
+        <h3>Vaccination</h3>
+        <p>Core vaccines, pet passport and a reminder before every booster is due.</p>
+      </article>
+    </section>
+
+    <section class="staff" id="staff" aria-labelledby="staff-title">
+      <h2 id="staff-title">Our staff</h2>
+
+      <article class="card">
+        <h3>Dr. Aigerim Sadykova</h3>
+        <p>Head veterinarian, therapist. 12 years of practice.</p>
+      </article>
+
+      <article class="card">
+        <h3>Dr. Daniyar Omarov</h3>
+        <p>Surgeon, anesthesiologist. 9 years of practice.</p>
+      </article>
+
+      <article class="card">
+        <h3>Dr. Madina Kenzhebay</h3>
+        <p>Vaccination and preventive care. 6 years of practice.</p>
+      </article>
+    </section>
+
+    <section class="appointment" id="appointment" aria-labelledby="appointment-title">
+      <h2 id="appointment-title">Book an appointment</h2>
+
+      <form class="form" action="#" method="post">
+        <label>
+          <span>Pet's Name</span>
+          <input type="text" name="pet_name" placeholder="Bella" autocomplete="off" required minlength="2">
+        </label>
+
+        <label>
+          <span>Pet Species</span>
+          <input type="text" name="pet_species" list="species" placeholder="Cat, dog, rabbit..." required>
+          <datalist id="species">
+            <option value="Cat">
+            <option value="Dog">
+            <option value="Rabbit">
+            <option value="Bird">
+          </datalist>
+        </label>
+
+        <label>
+          <span>Owner's Phone</span>
+          <input type="tel" name="owner_phone" placeholder="+7 700 000 00 00" pattern="[+0-9 ()\-]{10,18}" required>
+        </label>
+
+        <label>
+          <span>Owner's Email</span>
+          <input type="email" name="owner_email" placeholder="name@example.com" required>
+        </label>
+
+        <label>
+          <span>Appointment date</span>
+          <input type="date" name="visit_date" required>
+        </label>
+
+        <button class="btn btn-primary" type="submit">Book a visit</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <section aria-labelledby="contact-title">
+      <h2 id="contact-title">Emergency contact</h2>
+      <address>
+        <a href="tel:+77000000000">+7 700 000 00 00</a><br>
+        Abai Ave. 1, Almaty, Kazakhstan
+      </address>
+    </section>
+
+    <nav aria-label="Footer navigation">
+      <a href="#services">Services</a>
+      <a href="#staff">Staff</a>
+      <a href="#appointment">Appointment</a>
+    </nav>
+
+    <nav aria-label="Messengers">
+      <a href="https://wa.me/77000000000">WhatsApp</a>
+      <a href="https://t.me/pawcare_clinic">Telegram</a>
+    </nav>
+
+    <label class="theme-switch">
+      <input type="checkbox" id="theme-toggle" role="switch">
+      <span class="switch-track" aria-hidden="true"></span>
+      <span>Dark mode</span>
+    </label>
+
+    <small>&copy; 2026 PawCare Veterinary Clinic. License No. 000. All rights reserved.</small>
+  </footer>
+
+</body>
+</html>
